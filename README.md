@@ -30,7 +30,6 @@ This is the official repo for our CIKM paper: Inversed Adapter Tuning For Neural
 - [Example Usage](#example-usage)
 - [Preparing Datasets](#preparing-datasets)
 - [Zero-shot Domain Adaption](#zero-shot-domain-adaption)
-- [Few-shot Domain Adaption](#few-shot-domain-adaption)
 - [Learning Generic Relevance Estimation Ability](#learning-generic-relevance-estimation-ability)
 - [Reproducing Results with Released Checkpoints](#reproducing-results-with-released-checkpoints)
 - [Training Vanilla Neural Ranking Models](#training-vanilla-neural-ranking-models)
@@ -52,11 +51,10 @@ The idea of IAT can date back to classic retrieval models in the pre-neural-rank
 However, it does not exist in vanilla neural ranking models where the abilities of relevance estimation and domain modeling are jointly learned during training and entangled within the model parameters. 
 
 Here are two examples when we apply IAT for domain adaption. We plot the figure where y-axis shows the relative improvement over BM25 and x-axis shows different out-of-domain test sets.
-The ranking performance of Dense Retrieval (DR) with and without IAT is shown below.  
+<!-- The ranking performance of Dense Retrieval (DR) with and without IAT is shown below.  
 NDCG@10   |  Recall@1000
 :-------------------------:|:-------------------------:
-<img src="./figures/NDCG@10.png" width="100%"> | <img src="./figures/R@1000.png" width="97%"> 
-
+<img src="./figures/NDCG@10.png" width="100%"> | <img src="./figures/R@1000.png" width="97%">  -->
 The ranking performance of ColBERT with and without IAT is shown below. 
 NDCG@10   |  Recall@1000
 :-------------------------:|:-------------------------:
@@ -317,10 +315,6 @@ We give two adaption examples. They train a separate domain plugin in the target
 
 Please try these examples before using our methods on your own datasets.
 
-## Few-shot Domain Adaption
-
-Coming soon.
-
 ## Learning Generic Relevance Estimation Ability
 
 We already release a bunch of service models for various kinds of ranking methods. You can directly adopt these public checkpoints. 
@@ -353,10 +347,6 @@ We provide commands for reproducing the various results in our [paper](https://a
 - Evaluating Disentangled uniCOIL
   - [Evaluating Disentangled Dense Retrieval on English out-of-domain datasets](./examples/unicoil/english-marco/inference.md)
   - [Evaluating Disentangled Dense Retrieval on Chinese out-of-domain datasets](./examples/unicoil/chinese-dureader/inference.md)
-- Evaluating Disentangled SPLADE (coming soon)
-- Evaluating Disentangled uniCOIL (coming soon)
-- Evaluating Disentangled ColBERT (coming soon)
-- Evaluating Disentangled BERT re-ranker (coming soon)
 
 
 <!-- ### Generic Relevance Estimation: Training REM 
@@ -390,10 +380,6 @@ This powerful codebase not only supports Disentangled Neural Ranking, but also v
   - [Training Dense Retrieval models on Dureader](./examples/dense/chinese-dureader/train_baseline.md)
   - [Evaluating Dense Retrieval models on English out-of-domain datasets](./examples/dense/english-marco/inference_baseline.md)
   - [Evaluating Dense Retrieval models on Chinese out-of-domain datasets](./examples/dense/chinese-dureader/inference_baseline.md)
-- uniCOIL (coming soon)
-- SPLADE (coming soon)
-- ColBERT (coming soon)
-- BERT Re-rankers (coming soon)
 
 
 ## Citation
